@@ -16,7 +16,7 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 bot = commands.Bot(command_prefix=config.CMD_PREFIX, help_command=None, intents=intents)
 
 if __name__ == '__main__':
-    bot.load_extension(f'cogs.ffmpeg.exe')
+    bot.add_cog(f'cogs.ffmpeg.exe')
     for filename in os.listdir(config.COGS_PATH):
         bot.load_extension(f'cogs.{filename[:-3]}')
         print(f'Loaded cogs.{filename[:-3]}')
