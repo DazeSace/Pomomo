@@ -18,8 +18,9 @@ bot = commands.Bot(command_prefix=config.CMD_PREFIX, help_command=None, intents=
 if __name__ == '__main__':
     bot.add_cog(f'cogs.ffmpeg.exe')
     for filename in os.listdir(config.COGS_PATH):
-        bot.load_extension(f'cogs.{filename[:-3]}')
-        print(f'Loaded cogs.{filename[:-3]}')
+        if filename.endswith('.py'):
+            bot.load_extension(f'cogs.{filename[:-3]}')
+            print(f'Loaded cogs.{filename[:-3]}')
 
 
 @bot.event
