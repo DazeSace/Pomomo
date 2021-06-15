@@ -18,7 +18,7 @@ async def alert(session: Session):
         path = bot_enum.AlertPath.LONG_BREAK_START
     elif session.state != bot_enum.State.POMODORO:
         path = bot_enum.AlertPath.POMO_START
-    source = PCMVolumeTransformer(FFmpegPCMAudio(path, executable='/app/bot/sounds/ffmpeg.exe'),
+    source = PCMVolumeTransformer(FFmpegPCMAudio(path, executable='/bot/sounds/ffmpeg.exe'),
                                   volume=0.1)
     if vc.is_playing():
         vc.stop()
