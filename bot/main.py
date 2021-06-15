@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from configs import config
 from src.session import session_manager
 
-intents = discord.Intents.default()
+intents = discord.Intents.all()
 intents.typing = False
 intents.members = True
 
