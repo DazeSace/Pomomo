@@ -6,8 +6,8 @@ class State:
 
 
 class AlertPath:
-    POMO_START = '/app/bot/cogs/pomo_start.mp3'
-    POMO_END = '/app/bot/cogs/pomo_end.mp3'
-    LONG_BREAK_START = '/app/bot/cogs/long_break.mp3'
+    POMO_START = '/app/bot/sounds/pomo_start.mp3'
+    POMO_END = '/app/bot/sounds/pomo_end.mp3'
+    LONG_BREAK_START = '/app/bot/sounds/long_break.mp3'
 
 
