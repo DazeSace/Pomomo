@@ -17,8 +17,8 @@ bot = commands.Bot(command_prefix=config.CMD_PREFIX, help_command=None, intents=
 
 if __name__ == '__main__':
     for filename in os.listdir(config.COGS_PATH):
-        bot.load_extension(f'cogs.{filename}')
-        print(f'Loaded cogs.{filename}')
+        bot.load_extension(f'cogs.{filename[:-3]}')
+        print(f'Loaded cogs.{filename[:-3]}')
 
 
 @bot.event
